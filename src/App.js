@@ -1,23 +1,23 @@
+
 import logo from './logo.svg';
 import './App.css';
 
+// インポート文
+import TodoList from './TodoList';
+import { useState } from 'react';
+
+
 function App() {
+  const [todos,setTodos] = useState();
+  console 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList />
+      <input type='text'/>
+      <button>Add Task</button>
+      <button>Remove Task</button>
+      <div>Incomplete Task:0</div>
+
     </div>
   );
 }
