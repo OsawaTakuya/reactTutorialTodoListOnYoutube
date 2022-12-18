@@ -2,14 +2,14 @@
 // インポート文
 // syntax:import [moduleName] from '[filePath]'
 import React from 'react'
+import Todo from './Todo'
 
-const TodoList = () => {
-  return (
-    <div>
-        TodoList
-    </div>
-  )
-}
+const TodoList = ({todos}) => {
+
+  return todos.map((todo)=>{return <Todo todo={todo} />});
+};
+
+
 
 // エクスポート文
 // syntax: export (default) [variableName...]
