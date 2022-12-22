@@ -6,11 +6,16 @@ import TodoList from './TodoList';
 import { useState } from 'react';
 
 //【React入門】完全初心者OK！１から簡単なTodoアプリを作ってReactの１歩を踏み出してみよう ~Reactチュートリアル~
-// ～29:35
+// ～35:10
 
 
 function App() {
-  const [todos,setTodos] = useState(["Todo1","Todo2"]);
+  const [todos,setTodos] = useState(
+    [
+      {id:1,name:'Todo1',completed:false},
+      {id:2,name:'Todo2',completed:false},
+    ]
+  );
   return (
     <div className="App">
       <TodoList todos={todos}/>
