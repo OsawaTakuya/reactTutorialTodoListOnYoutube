@@ -1,10 +1,15 @@
+import { type } from '@testing-library/user-event/dist/type';
 import React from 'react'
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, toggleTodo }) => {
+    const handleTodoClick = () => {
+        toggleTodo(todo.id);
+    };
+
     return (
         <div>
             <label>
-                <input type='checkbox' checked={todo.completed} readOnly></input>
+                <input type='checkbox' checked={todo.completed} readOnly onChange={handleTodoClick}></input>
             </label>
             {todo.name}
         </div>
